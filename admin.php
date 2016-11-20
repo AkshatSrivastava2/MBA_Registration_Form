@@ -22,7 +22,7 @@ else{
   margin-bottom: 12px;
 }
 button{
-  background-color: #4CAF50;
+  background-color:   #0000FF;
     border: none;
     color: white;
     padding: 1% 1%;

@@ -80,14 +80,14 @@ if(isset($_POST['submit']))
 	
 	$query=mysqli_query($con,"SELECT email FROM studentdetails WHERE email='".$email."'");
 	
-if(mysqli_num_rows($query)==1)
+if(mysqli_num_rows($query)>=1)
   {
     while($row=mysqli_fetch_array($query))
     {
       $email1=md5($row['email']);
 	  $email=$row['email'];
     }
-    $link="<a href='localhost/MBA/reset.php?key=".$email1."'>Click here to verify your email and confirm form submission</a>";
+    $link="<a href='localhost/Latest%20MBA11/MBA/reset.php?key=".$email1."'>Click here to verify your email and confirm form submission</a>";
     
     
     require 'PHPmail/PHPMailerAutoload.php';
@@ -124,7 +124,7 @@ if(mysqli_num_rows($query)==1)
 
 				echo "<div class='alert' style='text-align:center;'>
   <span class='closebtn' onclick='this.parentElement.style.display=\"none\";'>&times;</span> 
-  <strong> A verification email has been sent, kindly login to your account and click on the link for verification </strong> 
+  <strong> A verification link has been sent to your email id,kindly click on that link for verification </strong> 
 </div>";
 			
 			
