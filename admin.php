@@ -93,6 +93,7 @@ window.onload=scroll;
    				<caption>Student Details</caption>
  			  		
  			  			<tr>
+                            <th rowspan="2">Date </th>
 		 			  		<th rowspan="2">SEE AKTU Roll No </th> 
 		 			  		<th rowspan="2">General Rank </th> 
 		 			  		<th rowspan="2">Category Rank </th> 
@@ -176,6 +177,7 @@ window.onload=scroll;
 		 		  	 		?>
 
                         <tr>
+                                <td><?php echo $r['Date']; ?></td>
                                 <td><?php echo $r['see_rollno']; ?></td>
                                 <td><?php echo $r['gen_rank']; ?></td>
                                 <td><?php echo $r['category_rank']; ?></td>

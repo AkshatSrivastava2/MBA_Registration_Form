@@ -1,78 +1,78 @@
 <!doctype html>
 <html>
+
 <head>
-	<title>Registration Form</title>
-	<style>
-.alert {
-    padding: 20px;
-    background-color: #4CAF50;
-    color: white;
-}
-.alert2 {
-    padding: 20px;
-    background-color: red;
-    color: white;
-}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <title>Registration Form</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .alert2 {
+            padding: 20px;
+            background-color: red;
+            color: white;
+        }
+        
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+            color: black;
+        }
 
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+    </style>
 
-.closebtn:hover {
-    color: black;
-}
-
-	</style>
-	
 </head>
+
 <body>
-<style>
-input[type=text] {
-    width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
+    <div id="header">
 
-input[type=submit]{ background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-}
 
-</style>
+        <h3 class="center">Ajay Kumar Garg Institute of Management</h3>
+        <div class="row"></div>
+        <h5 class="center">MBA Registration Form Email Verification</h5>
+    </div>
+    <div class="row"></div>
+    <div>
+        <h6 class="grey-text center"> Kindly provide your email id here, an auto-generated link will be sent to the given email, kindly click on the link for confirming registration form submission</h6><br><br><br>
 
-<div id="header">
-	
-	
-	<p id="layoutdims"><h1 style="text-align: center">Ajay Kumar Garg Institute of Management</h1></p>
-	<h2 style="text-align: center;color:blue;text-decoration: underline;">MBA Registration Form Email Verification</h2>
-</div>
-<div class="colmask threecol">
-	<div class="colmid">
-		<div class="colleft">
-			<div class="col1">
-				<!-- Column 1 start -->
-				<br><br><br>
-				<h3 style="text-align: center;color:blue;"> Kindly provide your email id here, an auto-generated link will be sent to the given email, kindly click on the link for confirming registration form submission</h3><br><br><br>
 
-				<form style="text-align:center;" action="" method="POST" >
-						<input type="text" name="email"  placeholder="Enter your email id">
-						<input type="submit" name="submit" value="Submit" ><br><br>
-				</form>
-
-<?php
+        
+            <div class="row">
+                <form class="form" action="" method="POST">
+                <div class="col s3" style="margin-left:4%;"></div>
+                    <div class="col s4">
+                        <div class="input-field">
+                    <input type="email" name="email" id="email">
+                    <label for="email">Email Address</label>
+                        </div>
+                </div>
+                <div style="padding-top:0.7777%;" class="col s2 input-field">
+                    <button class="btn blue white-text" type="submit" name="submit" value="Send">Send
+                        <i class="material-icons right">send</i></button>
+                </div>
+                <div class="col s2"></div>
+                    </form>
+                </div>
+        
+        <?php
 if(isset($_POST['submit']))
 {
 	$email=$_POST['email'];
@@ -140,13 +140,14 @@ if(mysqli_num_rows($query)==1)
 
 }
 ?>
-	
-				<br><br><br><br><br><br>
-				<!-- Column 1 end -->
-			</div>
-			
-	
+
+            <br><br><br><br><br><br>
+            <!-- Column 1 end -->
+            </div>
+
+
 
 
 </body>
+
 </html>

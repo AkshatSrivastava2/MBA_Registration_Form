@@ -1,21 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: Nov 15, 2016 at 05:23 PM
--- Server version: 10.1.9-MariaDB
--- PHP Version: 5.6.15
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `regform`
 --
@@ -47,13 +29,14 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 
 CREATE TABLE `studentdetails` (
   `id` int(11) NOT NULL,
-  `see_rollno` int(30) NOT NULL,
-  `gen_rank` int(30) NOT NULL,
-  `category_rank` int(30) NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `see_rollno` varchar(30) NOT NULL,
+  `gen_rank` varchar(30) NOT NULL,
+  `category_rank` varchar(30) NOT NULL,
   `cat_mat_cmat` varchar(30) NOT NULL,
   `percentile` varchar(30) NOT NULL,
   `other_exam_name` varchar(50) NOT NULL,
-  `other_exam_percentile` int(30) NOT NULL,
+  `other_exam_percentile` varchar(30) NOT NULL,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `fname` varchar(50) NOT NULL,
@@ -63,33 +46,33 @@ CREATE TABLE `studentdetails` (
   `Gender` varchar(50) NOT NULL,
   `state_of_domicile` varchar(100) NOT NULL,
   `permanent_add` varchar(200) NOT NULL,
-  `pincode_perm` int(10) NOT NULL,
-  `telno_perm` int(20) NOT NULL,
+  `pincode_perm` varchar(10) NOT NULL,
+  `telno_perm` varchar(20) NOT NULL,
   `correspondence_add` varchar(200) NOT NULL,
-  `pincode_corr` int(10) NOT NULL,
-  `telno_corr` int(20) NOT NULL,
+  `pincode_corr` varchar(10) NOT NULL,
+  `telno_corr` varchar(20) NOT NULL,
   `local_add` varchar(200) NOT NULL,
-  `pincode_loc` int(10) NOT NULL,
-  `telno_loc` int(20) NOT NULL,
+  `pincode_loc` varchar(10) NOT NULL,
+  `telno_loc` varchar(20) NOT NULL,
   `10_school_name` varchar(200) NOT NULL,
   `10_board` varchar(200) NOT NULL,
-  `10_passingyear` int(10) NOT NULL,
+  `10_passingyear` varchar(10) NOT NULL,
   `10_percentage` varchar(10) NOT NULL,
   `12_school_name` varchar(200) NOT NULL,
   `12_board` varchar(200) NOT NULL,
-  `12_passingyear` int(10) NOT NULL,
+  `12_passingyear` varchar(10) NOT NULL,
   `12_percentage` varchar(10) NOT NULL,
   `diploma_college` varchar(200) NOT NULL,
   `diploma_university` varchar(200) NOT NULL,
-  `diploma_passingyear` int(10) NOT NULL,
+  `diploma_passingyear` varchar(10) NOT NULL,
   `diploma_percentage` varchar(10) NOT NULL,
   `graduation_college` varchar(200) NOT NULL,
   `graduation_university` varchar(200) NOT NULL,
-  `graduation_passingyear` int(10) NOT NULL,
+  `graduation_passingyear` varchar(10) NOT NULL,
   `graduation_percentage` varchar(10) NOT NULL,
   `other_college` varchar(200) NOT NULL,
   `other_university` varchar(200) NOT NULL,
-  `other_passingyear` int(10) NOT NULL,
+  `other_passingyear` varchar(10) NOT NULL,
   `other_percentage` varchar(10) NOT NULL,
   `experience_duration` varchar(30) NOT NULL,
   `exp_organisation_name` varchar(200) NOT NULL,
@@ -101,10 +84,8 @@ CREATE TABLE `studentdetails` (
 -- Dumping data for table `studentdetails`
 --
 
-INSERT INTO `studentdetails` (`id`, `see_rollno`, `gen_rank`, `category_rank`, `cat_mat_cmat`, `percentile`, `other_exam_name`, `other_exam_percentile`, `name`, `email`, `fname`, `dob`, `nationality`, `category`, `Gender`, `state_of_domicile`, `permanent_add`, `pincode_perm`, `telno_perm`, `correspondence_add`, `pincode_corr`, `telno_corr`, `local_add`, `pincode_loc`, `telno_loc`, `10_school_name`, `10_board`, `10_passingyear`, `10_percentage`, `12_school_name`, `12_board`, `12_passingyear`, `12_percentage`, `diploma_college`, `diploma_university`, `diploma_passingyear`, `diploma_percentage`, `graduation_college`, `graduation_university`, `graduation_passingyear`, `graduation_percentage`, `other_college`, `other_university`, `other_passingyear`, `other_percentage`, `experience_duration`, `exp_organisation_name`, `hostel_req`, `verified`) VALUES
-(53, 0, 0, 0, 'CAT', '', '', 0, '', 'yeshagnihotri@gmail.com', '', '', '', 'general', 'male', '', '', 0, 0, '', 0, 0, '', 0, 0, '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 'Yes', '1'),
-(54, 0, 0, 0, 'CAT', '', '', 0, '', '', '', '', '', 'general', 'male', '', '', 0, 0, '', 0, 0, '', 0, 0, '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 'Yes', '0'),
-(55, 0, 0, 0, 'CAT', '', '', 0, '', 'mayur.pathak52@gmail.com', '', '', '', 'general', 'male', '', '', 0, 0, '', 0, 0, '', 0, 0, '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 'Yes', '1');
+INSERT INTO `studentdetails` (`id`, `Date`, `see_rollno`, `gen_rank`, `category_rank`, `cat_mat_cmat`, `percentile`, `other_exam_name`, `other_exam_percentile`, `name`, `email`, `fname`, `dob`, `nationality`, `category`, `Gender`, `state_of_domicile`, `permanent_add`, `pincode_perm`, `telno_perm`, `correspondence_add`, `pincode_corr`, `telno_corr`, `local_add`, `pincode_loc`, `telno_loc`, `10_school_name`, `10_board`, `10_passingyear`, `10_percentage`, `12_school_name`, `12_board`, `12_passingyear`, `12_percentage`, `diploma_college`, `diploma_university`, `diploma_passingyear`, `diploma_percentage`, `graduation_college`, `graduation_university`, `graduation_passingyear`, `graduation_percentage`, `other_college`, `other_university`, `other_passingyear`, `other_percentage`, `experience_duration`, `exp_organisation_name`, `hostel_req`, `verified`) VALUES
+(56, '2016-11-20 07:28:01', '1', '1', '1', 'CAT', '1', '1', '1', 'jcnncnc', 'dpksingh1729@gmail.com', 'jjcjcjcj', '15 November, 2016', 'indian', 'SC', 'male', 'up', '1', '123564', '1', '1', '214100', '1', '1', '123456', '1', '1', '1', '1222', '1', '1', '1', '1222', '1', '1', '1', '2221', '1', '1', '1', '1215', '1', '1', '1', '1245', '1', '1', '1', 'Yes', '1');
 
 --
 -- Indexes for dumped tables
@@ -135,7 +116,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `studentdetails`
 --
 ALTER TABLE `studentdetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

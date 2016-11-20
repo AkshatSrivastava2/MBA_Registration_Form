@@ -22,3 +22,7 @@ h5 {
 .error-class {
     color:#FF0000;
 }
+
+.padding {
+    padding-top: 25%; !important
+}

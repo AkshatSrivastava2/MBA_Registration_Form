@@ -4,7 +4,7 @@
 
 		/* declaration of variables */
 	$see_rollno = $gen_rank = $category_rank = $cat_mat_cmat = $percentile = $other_exam_name = $other_exam_percentile = "";
-
+    $date="";
 	$name = $email = $fname = $dob = $nationality = $category = $gender = $state_of_domicile = "";
 
 	$permanent_add=$pincode_perm=$telno_perm=$correspondence_add=$pincode_corr=$telno_corr=$local_add=$pincode_loc=$telno_loc="";
@@ -19,6 +19,8 @@
 
 if(isset($_POST['submit']))
 		{
+            date_default_timezone_set("Asia/Calcutta");
+            $date=date("Y/m/d h:i:sa");
 
 			$see_rollno = mysqli_real_escape_string($con,$_POST['rollno']);
 			$gen_rank = mysqli_real_escape_string($con,$_POST['genrank']);
@@ -81,9 +83,9 @@ if(isset($_POST['submit']))
 
 
 
-	$sql = "INSERT INTO studentdetails(see_rollno,gen_rank,category_rank,cat_mat_cmat,percentile,other_exam_name,other_exam_percentile,name,email,fname,dob,nationality,category,gender,state_of_domicile,permanent_add,pincode_perm,telno_perm,correspondence_add,pincode_corr,telno_corr,local_add,pincode_loc,telno_loc,10_school_name,10_board,10_passingyear,10_percentage,12_school_name,12_board,12_passingyear,12_percentage,diploma_college,diploma_university,diploma_passingyear,diploma_percentage,graduation_college,graduation_university,graduation_passingyear,graduation_percentage,other_college,other_university,other_passingyear,other_percentage,experience_duration,exp_organisation_name,hostel_req) 
+	$sql = "INSERT INTO studentdetails(Date,see_rollno,gen_rank,category_rank,cat_mat_cmat,percentile,other_exam_name,other_exam_percentile,name,email,fname,dob,nationality,category,gender,state_of_domicile,permanent_add,pincode_perm,telno_perm,correspondence_add,pincode_corr,telno_corr,local_add,pincode_loc,telno_loc,10_school_name,10_board,10_passingyear,10_percentage,12_school_name,12_board,12_passingyear,12_percentage,diploma_college,diploma_university,diploma_passingyear,diploma_percentage,graduation_college,graduation_university,graduation_passingyear,graduation_percentage,other_college,other_university,other_passingyear,other_percentage,experience_duration,exp_organisation_name,hostel_req) 
 
-	VALUES('$see_rollno','$gen_rank','$category_rank','$cat_mat_cmat','$percentile','$other_exam_name','$other_exam_percentile','$name','$email','$fname','$dob','$nationality','$category','$gender','$state_of_domicile','$permanent_add','$pincode_perm','$telno_perm','$correspondence_add','$pincode_corr','$telno_corr','$local_add','$pincode_loc','$telno_loc','$school_name_10','$board_10','$passingyear_10','$percentage_10','$school_name_12','$board_12','$passingyear_12','$percentage_12','$diploma_college','$diploma_university','$diploma_passingyear','$diploma_percentage','$graduation_college','$graduation_university','$graduation_passingyear','$graduation_percentage','$other_college','$other_university','$other_passingyear','$other_percentage','$experience_duration','$exp_organisation_name','$hostel_req')";
+	VALUES('$date','$see_rollno','$gen_rank','$category_rank','$cat_mat_cmat','$percentile','$other_exam_name','$other_exam_percentile','$name','$email','$fname','$dob','$nationality','$category','$gender','$state_of_domicile','$permanent_add','$pincode_perm','$telno_perm','$correspondence_add','$pincode_corr','$telno_corr','$local_add','$pincode_loc','$telno_loc','$school_name_10','$board_10','$passingyear_10','$percentage_10','$school_name_12','$board_12','$passingyear_12','$percentage_12','$diploma_college','$diploma_university','$diploma_passingyear','$diploma_percentage','$graduation_college','$graduation_university','$graduation_passingyear','$graduation_percentage','$other_college','$other_university','$other_passingyear','$other_percentage','$experience_duration','$exp_organisation_name','$hostel_req')";
 
 					$result = mysqli_query($con,$sql);
 						if($result)
