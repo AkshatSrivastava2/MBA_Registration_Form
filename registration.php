@@ -88,10 +88,15 @@ if(isset($_POST['submit']))
 	VALUES('$date','$see_rollno','$gen_rank','$category_rank','$cat_mat_cmat','$percentile','$other_exam_name','$other_exam_percentile','$name','$email','$fname','$dob','$nationality','$category','$gender','$state_of_domicile','$permanent_add','$pincode_perm','$telno_perm','$correspondence_add','$pincode_corr','$telno_corr','$local_add','$pincode_loc','$telno_loc','$school_name_10','$board_10','$passingyear_10','$percentage_10','$school_name_12','$board_12','$passingyear_12','$percentage_12','$diploma_college','$diploma_university','$diploma_passingyear','$diploma_percentage','$graduation_college','$graduation_university','$graduation_passingyear','$graduation_percentage','$other_college','$other_university','$other_passingyear','$other_percentage','$experience_duration','$exp_organisation_name','$hostel_req')";
 
 					$result = mysqli_query($con,$sql);
+
+
 						if($result)
 							{	
 								$message = "Form submitted, kindly confirm your email on which verification link will be sent";
 								echo "<script type='text/javascript'>alert('$message');</script>";
+
+								session_start();
+								$_SESSION['email12'] = $email;
 								header('Refresh:0;url=confirmsubmit.php');
 								/*echo "Form Submitted<br>";
 								echo "Kindly confirm your email on which verification link has been sent";

@@ -26,3 +26,7 @@ h5 {
 .padding {
     padding-top: 25%; !important
 }
+.help-block{
+    display: block;
+    font-size: 11px;
+}
