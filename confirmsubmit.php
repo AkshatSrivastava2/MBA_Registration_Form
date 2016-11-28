@@ -51,7 +51,7 @@
     </div>
     <div class="row"></div>
     <div>
-        <h6 class="grey-text center"> Kindly provide your email id here, an auto-generated link will be sent to the given email, kindly click on the link for confirming registration form submission</h6><br><br><br>
+        <h6 class="grey-text center"> Kindly cofirm your email id here, an auto-generated link will be sent to the given email, kindly click on the link for confirming registration form submission</h6><br><br><br>
 
 
         
@@ -126,7 +126,7 @@ if(mysqli_num_rows($query)>=1)
 
 				echo "<div class='alert' style='text-align:center;'>
   <span class='closebtn' onclick='this.parentElement.style.display=\"none\";'>&times;</span> 
-  <strong> A verification link has been sent to your email id,kindly click on that link for verification </strong> 
+  <strong> A verification link has been sent to your email id, kindly click on that link for verification </strong> 
 </div>";
 			
 			
