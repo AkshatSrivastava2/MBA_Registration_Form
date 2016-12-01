@@ -259,7 +259,7 @@
                             <td class="row">
                                 <div class="col s1"></div>
                                 <div class="input-field col s5">
-                                    <input type="text" name="pincodecorr" placeholder="PIN Code" data-validation="custom" data-validation-regexp="^[1-9][0-9]{5}$">
+                                    <input type="text" name="pincodecorr" placeholder="PIN Code" data-validation="required custom" data-validation-regexp="^[1-9][0-9]{5}$">
                                 </div>
                                 <div class="input-field col s5">
                                     <input type="text" name="telnocorr" placeholder="Tel No." data-validation="required custom" data-validation-regexp='^[0-9]+$'>
@@ -291,7 +291,7 @@
                         <th>SCHOOL/COLLEGE</th>
                         <th>BOARD/UNIVERSITY</th>
                         <th>YEAR OF PASSING</th>
-                        <th>OVERALL PERCENTAGE (%)</th>
+                        <th>AGGREGATE PERCENTAGE (%)<br> / C.G.P.A.</th>
                     </thead>
                     <tbody>
                         <tr>

@@ -85,7 +85,8 @@ CREATE TABLE `studentdetails` (
 --
 
 INSERT INTO `studentdetails` (`id`, `Date`, `see_rollno`, `gen_rank`, `category_rank`, `cat_mat_cmat`, `percentile`, `other_exam_name`, `other_exam_percentile`, `name`, `email`, `fname`, `dob`, `nationality`, `category`, `Gender`, `state_of_domicile`, `permanent_add`, `pincode_perm`, `telno_perm`, `correspondence_add`, `pincode_corr`, `telno_corr`, `local_add`, `pincode_loc`, `telno_loc`, `10_school_name`, `10_board`, `10_passingyear`, `10_percentage`, `12_school_name`, `12_board`, `12_passingyear`, `12_percentage`, `diploma_college`, `diploma_university`, `diploma_passingyear`, `diploma_percentage`, `graduation_college`, `graduation_university`, `graduation_passingyear`, `graduation_percentage`, `other_college`, `other_university`, `other_passingyear`, `other_percentage`, `experience_duration`, `exp_organisation_name`, `hostel_req`, `verified`) VALUES
-(56, '2016-11-20 07:28:01', '1', '1', '1', 'CAT', '1', '1', '1', 'jcnncnc', 'dpksingh1729@gmail.com', 'jjcjcjcj', '15 November, 2016', 'indian', 'SC', 'male', 'up', '1', '123564', '1', '1', '214100', '1', '1', '123456', '1', '1', '1', '1222', '1', '1', '1', '1222', '1', '1', '1', '2221', '1', '1', '1', '1215', '1', '1', '1', '1245', '1', '1', '1', 'Yes', '1');
+(56, '2016-11-20 07:28:01', '1', '1', '1', 'CAT', '1', '1', '1', 'jcnncnc', 'dpksingh1729@gmail.com', 'jjcjcjcj', '15 November, 2016', 'indian', 'SC', 'male', 'up', '1', '123564', '1', '1', '214100', '1', '1', '123456', '1', '1', '1', '1222', '1', '1', '1', '1222', '1', '1', '1', '2221', '1', '1', '1', '1215', '1', '1', '1', '1245', '1', '1', '1', 'Yes', '1'),
+(68, '2016-11-27 21:58:17', '1402710116', '456', '12', 'CAT', '1233', 'dfdgn', 'sfdghfg', 'fsdgewrgttggh', 'rgtygfbh@gmail.com', 'fergthyjyt ghgjj', '9 August, 2005', 'rasrdthgggdfh', 'general', 'male', 'retryery', 'fgxhsgfh', '242342', '13213324', 'dfghgfhg', '242342', '3423432', 'ghhgfh', '', '', 'efgrtsdyffgh', 'restdggh', '2122', '12', 'rtgdhjkhj', 'waersatdfy', '1212', '12', 'rtyujgtyu', '', '', '', 'teryuytui', 'rwe4tsydftfy', '1122', '2322', 'e5tryuytu', '', '', '', '', '', 'Yes', '0');
 
 --
 -- Indexes for dumped tables
@@ -116,7 +117,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `studentdetails`
 --
 ALTER TABLE `studentdetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
