@@ -60,7 +60,7 @@
                 <div class="col s3" style="margin-left:4%;"></div>
                     <div class="col s4">
                         <div class="input-field">
-                    <input type="email" name="email" value=" <?php session_start(); echo $_SESSION['email12']; ?>" id="email">
+                    <input type="email" name="email" value=" <?php session_start(); echo @$_SESSION['email12']; ?>" id="email">
                     <label for="email">Email Address</label>
                         </div>
                 </div>

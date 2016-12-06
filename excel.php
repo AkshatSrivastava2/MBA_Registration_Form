@@ -9,6 +9,7 @@ if(isset($_POST['export_excel']))
 		{
 			$output.= '
 			<table border="1">
+			<caption style="text-align:center;">Student Details</caption>
 				<tr>
 					<th rowspan="2">Date </th>
 		 			  		<th rowspan="2">SEE AKTU Roll No </th> 

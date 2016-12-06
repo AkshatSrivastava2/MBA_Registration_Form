@@ -13,7 +13,14 @@ else{
 	<title>Admin Panel</title>
 	<link rel="stylesheet" type="text/css" href="tablestyle.css">
    <!-- Latest compiled and minified CSS -->
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- jQuery library -->
 
@@ -39,6 +46,9 @@ button{
     cursor: pointer;
     border-radius: 4px;
     float:right;
+}
+th{
+  text-align: center;
 }
 </style>
 <body>
@@ -73,14 +83,14 @@ window.onload=scroll;
 </script>
  
 		<div id="header">
-					<h1 style="text-align: center">Ajay Kumar Garg Institute of Management</h1><hr size="2">
+					<h1 style="text-align: center">Ajay Kumar Garg Institute of Management</h1><hr style="width: 100%; color: black; height: 1px; background-color:black;" />
 					<!--<a href="logout.php" style="text-decoration:none;float: right; ">Logout</a>-->
-          <button onclick="window.location.href='logout.php'">Logout</button>
-
+         
 			<h2 style="text-align: center;text-decoration: underline;">MBA Registration Form</h2>
 			<h2 style="text-align: center;">Student Details</h2>
 
 		</div>
+    <button class='btn btn-primary' onclick="window.location.href='logout.php'">Logout</button>
 		
 
 <?php
@@ -97,8 +107,8 @@ window.onload=scroll;
  		<?php
  		echo "<input type='text' id='myInput' onkeyup='myFunction()' placeholder='Search by Student name..'>"; ?>
  		<div style="width: 100%" id="maintable">
-   			<table id='myTable' class='tab1' border='1' style="display: block;overflow-x: scroll;" > 
-   				<caption>Student Details</caption>
+   			<table id='myTable' class='table table-striped' border='1' style="text-align: center;display: block;overflow-x: scroll;" > 
+   				<caption style="text-align: center;">Student Details</caption>
  			  		
  			  			<tr>
                             <th rowspan="2">Date </th>
