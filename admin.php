@@ -12,6 +12,14 @@ else{
 <head>
 	<title>Admin Panel</title>
 	<link rel="stylesheet" type="text/css" href="tablestyle.css">
+   <!-- Latest compiled and minified CSS -->
+
+
+<!-- jQuery library -->
+
+
+<!-- Latest compiled JavaScript -->
+
 </head>
 <style>
 		#myInput {
@@ -243,6 +251,10 @@ window.onload=scroll;
  		  	  		?>
 
  		  	  		</div>
+              <div>
+                <form action="excel.php" method="post">
+                  <input type="submit" name="export_excel" class="btn btn-primary" value="Export to excel">
+              </div>
 
 </body>
 </html>
